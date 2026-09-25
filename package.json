@@ -1,0 +1,22 @@
+{
+  "name": "venus",
+  "version": "2.1.0",
+  "private": true,
+  "packageManager": "bun@1.4.0",
+  "type": "module",
+  "scripts": {
+    "build": "bun build src/frontend.ts --outfile dist/frontend.js --target browser --format esm --minify",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test src/settings/v2.test.ts src/css/v2.test.ts src/typography/smart-quotes.test.ts",
+    "test:all": "bun run typecheck && bun run test && bun run build"
+  },
+  "dependencies": {
+    "lumiverse-spindle-types": "0.6.29"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.2",
+    "bun-types": "^1.4.0",
+    "fflate": "^0.8.3",
+    "typescript": "7.0.2"
+  }
+}
